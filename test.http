@@ -1,0 +1,147 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "vs",
+  "password" : "secret",
+  "name" : "Vergie Sky"
+}
+
+###
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "vs",
+  "password" : "secret"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+{
+  "name" : "Vergie Sky"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+###
+
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+{
+  "first_name" : "Lyoko",
+  "last_name" : "Desu",
+  "email" : "lyoko@gmail.com",
+  "phone" : "123456789012"
+}
+
+###
+
+GET http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+###
+
+GET http://localhost:3000/api/contacts/317
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+### Update
+
+PUT http://localhost:3000/api/contacts/317
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+{
+  "first_name": "John",
+  "last_name": "Takeshi",
+  "email": "john@gmail.com",
+  "phone": "123456789012"
+}
+
+### Delete Contact
+
+DELETE http://localhost:3000/api/contacts/317
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+### Create Address
+
+POST http://localhost:3000/api/contacts/316/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+{
+  "street" : "rumah",
+  "city" : "Jakarta",
+  "province" : "DKI JAKARTA",
+  "country" : "Indonesia",
+  "postal_code" : "123456"
+}
+
+
+### List Addresses
+
+GET http://localhost:3000/api/contacts/316/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+
+### Get Address
+
+GET http://localhost:3000/api/contacts/316/addresses/46
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+### Update Address
+
+PUT http://localhost:3000/api/contacts/316/addresses/46
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+{
+  "street" : "rumah sendiri",
+  "city" : "Bandung",
+  "province" : "Jawa Barat",
+  "country" : "Indonesia",
+  "postal_code" : "123456"
+}
+
+### Remove Address
+
+DELETE http://localhost:3000/api/contacts/316/addresses/46
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
